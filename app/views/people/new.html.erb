@@ -1,0 +1,12 @@
+<%= form_with model:@people do |n| %>
+<div>
+	<%= n.label :name,"Enter Your Name" %>
+	<%= n.text_field :name %>
+</div>
+<div>
+	<%= n.label :age,"Enter Your Age" %>
+	<%= n.text_field :age %>
+</div>
+<button><%= n.submit "Create" %></button>
+<% end %>
+
