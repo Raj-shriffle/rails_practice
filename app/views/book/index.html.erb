@@ -1,0 +1,25 @@
+<center>
+	<h1>The Listining of Books is</h1>
+<table>
+	<tr> 
+		<th>
+			Collection of Books
+		</th>
+	</tr>
+	<tr>
+		<td>Book_title</td>
+		<td>Author_name</td>
+		<td>Price</td>
+	</tr>
+	<% @a.each do |n| %>
+    <tr>
+    	<td><%= n.id %></td>
+    	<td><%= n.b_name %></td>
+    	<td><%= n.author %></td>
+    	<td><%= n.price %></td>
+    	<td><%= link_to "Edit",book_path(n.id) %></td>
+    	<td><%= link_to "Delete",book1_path(n.id) %></td>
+    </tr>
+    <% end %>
+</table>
+</center>
