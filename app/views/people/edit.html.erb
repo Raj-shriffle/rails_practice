@@ -1,0 +1,23 @@
+<h1>This is Editing page</h1>
+
+<%= form_with model:@people do |pp| %>
+
+<ul>
+
+	<div>
+
+		<li><%= pp.label :uname, "Enter Your Updated Name" %></li>
+
+		<li><%= pp.text_field :name %></li>
+
+		<li><%= pp.label :age, "Enter Your Updated Age" %></li>
+
+		<li><%= pp.text_field :age %></li>
+
+		<li><%= pp.submit "Update" %></li>
+
+
+	</div>
+
+</ul>
+<% end %>

@@ -1,0 +1,10 @@
+<h1>This is User Side Data </h1>
+<% @peoples.each do |b| %>
+	<ul>
+		<li><%= b.id %></li>
+		<li><%= link_to "Show Data",person_path(b) %></li>
+		<li><%= link_to "Edit Data",edit_person_path(b) %></li>
+		<li><%= link_to "Destroy",person_path(b),data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %></li>
+	</ul>
+<% end %>
+<button><%= link_to "Create Data",new_person_path %></button>

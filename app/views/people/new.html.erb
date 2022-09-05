@@ -1,0 +1,19 @@
+<h1>This is new Article </h1>
+
+<%= form_with model: @people do |a| %>
+
+<div>
+<%= a.label :name,"Enter Your Name" %>
+<%= a.text_field :name %></br>
+</div>
+
+<div>
+<%= a.label :age, "Enter Your Age" %>
+<%= a.text_field :age %></br>
+</div>
+
+<div>
+<%= a.submit "Create" %>
+</div>
+
+<% end %>
