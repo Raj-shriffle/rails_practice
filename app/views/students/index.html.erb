@@ -1,0 +1,11 @@
+<h1>this is heading</h1>
+<% @students.each do |n| %>
+	<ul type="1">
+		<li><%= n.id %></li>
+		<li><%= link_to "Show Specific Person",student_path(n.id) %></li>
+		<li><%= link_to "Edit Data",edit_student_path(n.id) %></li>
+<li><%= link_to "Delete",student_path(n.id),data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %></li>
+	</ul>
+<% end %>
+<h1>Add new Student</h1>
+<button><%= link_to "Add New Student",new_student_path %></button>

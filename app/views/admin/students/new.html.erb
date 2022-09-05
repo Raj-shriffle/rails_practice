@@ -1,0 +1,18 @@
+<%#byebug%>
+<%= form_with model: @student, url: admin_students_path do |n| %>
+<div>
+	<%= n.label :name, "Enter student Name" %>
+	<%= n.text_field :name %>
+</div><br/>
+
+<div>
+	<%= n.label :rollno, "Enter student Rollno" %>
+	<%= n.text_field :rollno %>
+</div><br/>
+
+<div>
+<%= n.submit "Create" %>
+</div>
+
+<% end %>
+<!-- url: admin_students_path -->

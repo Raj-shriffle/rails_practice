@@ -1,0 +1,7 @@
+<h1>THIS IS EDIT PAGE</h1>
+
+<%= form_with  model: @student, url: admin_student_path do |n| %>
+     <%= n.label :name,"Enter Update Name" %>
+	 <%= n.text_field :name %>
+     <%= n.submit "Update" %>
+<% end %>
