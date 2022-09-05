@@ -1,0 +1,26 @@
+<%= form_with method: :post do |f| %>
+	<%= f.label :name, "Enter Your Name" %>
+	<%= f.text_field :name %><br/>
+	<%= f.label :mob, "Enter Your Mobile" %>
+	<%= f.text_field :mob %><br/>
+	<%= f.label :age, "Enter Your Age" %>
+	<%= f.text_field :age %><br/>
+	<%= f.label :gen, "Enter Your gen:->" %>
+	<%= f.label :male %>
+	<%= f.radio_button :male, "one" %>
+	<%= f.label :female %>
+	<%= f.radio_button :female, "two" %><br/>
+	<%= f.label :add ,"Enter Your Address" %>
+	<%= f.text_area :add, size: "60x10" %>
+	 <%= f.button "Delete", formmethod: :delete, data: { confirm: "Are you sure?" } %>
+	 <%= f.select :city, ["Berlin","Denver","Tokyo","sinsinati"],selected:"Tokyo" %><br/>
+	 <%= f.select :city, [["Berlin", "BE"], ["Chicago", "CHI"], ["Madrid", "MD"]], selected: "CHI" %>
+	 <%= f.select :city,
+      {
+       "India"=>[["Indore","MP"],["Mumbai","M"],["Surat","GJ"]],
+       "America"=>[["California","CF"],["Chicago","CG"]]
+      },
+      selected: "CHI" %>
+      <br/>
+	<%= f.submit %>
+<% end %>

@@ -1,0 +1,48 @@
+<%# commented line 
+<%= form_with do |f| 
+<%= f.label :args ,"Enter your name" 
+  <%= f.text_field :args <br/>
+  <%= f.label :sirname, "Enter your sirname" 
+  <%= f.text_field :sirname <br/>
+   <%= f.label :pfield, "Password" 
+  <%= f.password_field :pfield 
+  <%= f.label :email , "Enter Your mail" 
+  <%= f.email_field :email <br/>
+  <%= f.label :mob, "Enter your mobile"
+  <%= f.telephone_field :mob <br/>
+  <%= f.label :time, "Select Time" 
+  <%= f.time_field :started_at <br/>
+  <%= f.label :passing_year, "Passing year" 
+  <%= f.datetime_local_field :passing_year <br/>
+  <%= f.label :birth , "Enter Your Birthday" 
+  <%= f.datetime_local_field :birth <br/>
+<!-- -->
+  <%= f.label :gen ,"Gender:->"
+  <%= f.label :male, "Male" 
+  <%= f.radio_button :gen, "Male" 
+  <%= f.label :male, "Female"
+  <%= f.radio_button :gen, "Female<br/>
+  <%= f.label :hobbies , "Select Hobbies" 
+  <%= f.label :cricket , "Cricket" 
+  <%= f.check_box :cricket 
+  <%= f.label :hockey , "Hockey" 
+  <%= f.check_box :hobbies 
+  <%= f.label :gems , "Gemes" 
+  <%= f.check_box :gems <br/>
+  <%= f.label :message, "Address" 
+  <%= f.text_area :message, size: "70x5" <br/>
+  <%= f.label :search , "Search Your Friend" 
+  <%= f.search_field :search 
+
+<% end %>
+<%= form_with model: @student do |form| %>
+  <%= form.select :city, [["Berlin", "BE"], ["Chicago", "CHI"], ["Madrid", "MD"]] %>
+  <%= select_year 1999, prefix: "party" %>
+  <%= select_month 1 %>
+  <%= select_day 1 %>
+  <%= select_hour 1 %>
+  <%= select_minute 1 %>
+  <%= select_second 1 %>
+   <%= form.file_field :picture %>
+   <%= check_box_tag "accept" %>
+<% end %>
