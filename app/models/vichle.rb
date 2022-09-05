@@ -1,0 +1,2 @@
+class Vichle < ApplicationRecord
+end
